@@ -130,10 +130,9 @@ npx eslint .
 - GitHub: [@githubhandle](https://github.com/mryeminthu)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ye-min-thu-76456a214/)
 
-👤 ** **
+👤 **Arch-Noize**
 
-- GitHub: [@githubhandle]()
-- LinkedIn: [LinkedIn]()
+- GitHub: [@githubhandle](https://github.com/Arch-Noize)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
