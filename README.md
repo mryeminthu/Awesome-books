@@ -123,13 +123,14 @@ npx eslint .
 
   <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Author-1 <a name="authors"></a>
 
 👤 **Ye Min Thu**
 
 - GitHub: [@githubhandle](https://github.com/mryeminthu)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ye-min-thu-76456a214/)
 
+## 👥 Author-2 <a name="authors"></a>
 👤 **Arch-Noize**
 
 - GitHub: [@githubhandle](https://github.com/Arch-Noize)
