@@ -8,12 +8,17 @@ const books = JSON.parse(localStorage.getItem('books')) || [];
 
 const display = () => {
   output.innerHTML = '';
-
+  output.classList.add('container');
   for (let index = 0; index < books.length; index += 1) {
     const book = books[index];
-    output.innerHTML += `${book.title}<br>${book.author}<br>
-          <button class="remove-button" onclick="removeBook(${index})">Remove</button>
-          <hr><br>`;
+    output.innerHTML += `
+      <div class="books">
+        "${book.title}" by ${book.author}
+        <button class="remove-button" onclick="removeBook(${index})">Remove</button>
+      </div>`;
+  }
+  if (books.length === 0){
+    output.classList.remove('container');
   }
 };
 
