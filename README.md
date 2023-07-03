@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>Capstone Project</b></h3>
+  <h3><b>Awesome books</b></h3>
 </div>
 
 # 📗 Table of Contents
@@ -30,7 +30,7 @@
 
 # 📖 [Awesome books] <a name="about-project"></a>
 
-Our website is designed for individuals like you who are keen to take their Martial Arts expertise to new heights. So, whether you are a beginner or an experienced fighter, we have programs that cater to all levels of experience. Explore our website and see what we have to offer.
+This project is created to understand different ways to create objects in JavaScript.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,11 +53,9 @@ Our website is designed for individuals like you who are keen to take their Mart
 
 ### Key Features <a name="key-features"></a>
 
-- **Myanmar Fight Team Website**
-- **RWD for any devices**
-- **Use Flexbox to place elements in the page**
-- **Use GitHub Pages to deploy web pages**
-- **Use JavaScript to manipulate DOM elements**
+- User can add a new book to the collection, with title and author.
+- User can remove a book from the collection.
+- Data is preserved in the browser's memory by using localStorage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,7 +63,7 @@ Our website is designed for individuals like you who are keen to take their Mart
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://mryeminthu.github.io/Capstone-Project/)
+- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,13 +123,17 @@ npx eslint .
 
   <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Author-1 <a name="authors"></a>
 
 👤 **Ye Min Thu**
 
 - GitHub: [@githubhandle](https://github.com/mryeminthu)
-- Twitter: [@twitterhandle](https://twitter.com/mryeminthu)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ye-min-thu-76456a214/)
+
+## 👥 Author-2 <a name="authors"></a>
+👤 **Arch-Noize**
+
+- GitHub: [@githubhandle](https://github.com/Arch-Noize)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,7 +141,7 @@ npx eslint .
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add more webpages such as Program, Join, etc.**
+- To create Responsive Web Design with working navigation. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,7 +150,7 @@ npx eslint .
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/mryeminthu/Capstone-Project/issues).
+Feel free to check the [issues page](https://github.com/mryeminthu/Awesome-books/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,8 +166,7 @@ If you like this project, follow my Facebook Page and subscribe my You Tube Chan
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank Microverse and my coding partners.
-- [Cindy Shin in Behance](https://www.behance.net/adagio07) is credited with the original concept and idea for the design showcased.
+- I would like to thank Microverse and my coding partner.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
