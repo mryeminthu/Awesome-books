@@ -25,9 +25,9 @@ class BookLibrary {
       const bookElement = document.createElement('div');
       bookElement.classList.add('book-entry');
       bookElement.innerHTML = `
-        <span class="book-title">"${book.title}"</span> by <span class="book-author">${book.author}</span>
+        "${book.title}" by ${book.author}
         <button class="remove-button" data-index="${index}">Remove</button>`;
-      bookElement.style.backgroundColor = index % 2 === 0 ? '#4fe71c' : '#C611D0';
+      bookElement.style.backgroundColor = index % 2 === 0 ? '#fff' : '#ababab';
       this.output.appendChild(bookElement);
     });
 
