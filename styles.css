@@ -25,6 +25,25 @@ hr {
   margin: 0.5em 0 0.5em 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
+
+/* Navbar */
+
+#navbar {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+  padding: 0.2em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Add Book Section */
+
 .book-section {
   display: flex;
   flex-direction: column;
