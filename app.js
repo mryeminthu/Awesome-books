@@ -31,6 +31,12 @@ class BookLibrary {
       this.output.appendChild(bookElement);
     });
 
+    if (Object.keys(this.books).length === 0) {
+      this.output.classList.remove('container');
+    } else { 
+      this.output.classList.add('container');
+    };
+
     const removeButtons = this.output.getElementsByClassName('remove-button');
     Array.from(removeButtons).forEach(button => {
       button.addEventListener('click', this.handleRemove.bind(this));
