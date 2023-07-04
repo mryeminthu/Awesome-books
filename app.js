@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file */
+
 class BookEntry {
   constructor(title, author) {
     this.title = title;
@@ -5,6 +7,7 @@ class BookEntry {
   }
 }
 
+/* eslint-disable-next-line no-unused-vars */
 class BookLibrary {
   constructor() {
     this.titleInput = document.getElementById('title');
@@ -33,9 +36,9 @@ class BookLibrary {
 
     if (Object.keys(this.books).length === 0) {
       this.output.classList.remove('container');
-    } else { 
+    } else {
       this.output.classList.add('container');
-    };
+    }
 
     const removeButtons = this.output.getElementsByClassName('remove-button');
     Array.from(removeButtons).forEach(button => {
@@ -69,4 +72,3 @@ class BookLibrary {
 }
 
 const bookLibrary = new BookLibrary();
-
