@@ -1,47 +1,77 @@
-const title = document.getElementById('title');
-const author = document.getElementById('author');
-const addBtn = document.getElementById('addBtn');
-const output = document.getElementById('output');
-const errorMsg = document.getElementById('error-msg');
+/* eslint-disable max-classes-per-file */
 
-const books = JSON.parse(localStorage.getItem('books')) || [];
-
-const display = () => {
-  output.innerHTML = '';
-
-  for (let index = 0; index < books.length; index += 1) {
-    const book = books[index];
-    output.innerHTML += `${book.title}<br>${book.author}<br>
-          <button class="remove-button" onclick="removeBook(${index})">Remove</button>
-          <hr><br>`;
+class BookEntry {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
   }
-};
-
-addBtn.onclick = function handleClick(event) {
-  event.preventDefault();
-  const titleValue = title.value;
-  const authorValue = author.value;
-  if (titleValue && authorValue) {
-    const book = {
-      title: titleValue,
-      author: authorValue,
-    };
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
-    display();
-    title.value = '';
-    author.value = '';
-    errorMsg.textContent = '';
-  } else {
-    errorMsg.textContent = 'Please make sure to fill both the title and author.';
-  }
-};
-
-/* eslint-disable-next-line no-unused-vars */
-function removeBook(index) {
-  books.splice(index, 1);
-  localStorage.setItem('books', JSON.stringify(books));
-  display();
 }
 
-display();
+/* eslint-disable-next-line no-unused-vars */
+class BookLibrary {
+  constructor() {
+    this.titleInput = document.getElementById('title');
+    this.authorInput = document.getElementById('author');
+    this.addBtn = document.getElementById('addBtn');
+    this.output = document.getElementById('output');
+    this.errorMsg = document.getElementById('error-msg');
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
+
+    this.display();
+    this.addBtn.addEventListener('click', this.handleClick.bind(this));
+  }
+
+  display() {
+    this.output.innerHTML = '';
+
+    this.books.forEach((book, index) => {
+      const bookElement = document.createElement('div');
+      bookElement.classList.add('book-entry');
+      bookElement.innerHTML = `
+        "${book.title}" by ${book.author}
+        <button class="remove-button" data-index="${index}">Remove</button>`;
+      bookElement.style.backgroundColor = index % 2 === 0 ? '#fff' : '#ababab';
+      this.output.appendChild(bookElement);
+    });
+
+    if (Object.keys(this.books).length === 0) {
+      this.output.classList.remove('container');
+    } else {
+      this.output.classList.add('container');
+    }
+
+    const removeButtons = this.output.getElementsByClassName('remove-button');
+    Array.from(removeButtons).forEach((button) => {
+      button.addEventListener('click', this.handleRemove.bind(this));
+    });
+  }
+
+  handleClick(event) {
+    event.preventDefault();
+    const titleValue = this.titleInput.value;
+    const authorValue = this.authorInput.value;
+    if (titleValue && authorValue) {
+      const book = new BookEntry(titleValue, authorValue);
+      this.books.push(book);
+      localStorage.setItem('books', JSON.stringify(this.books));
+      this.display();
+      this.titleInput.value = '';
+      this.authorInput.value = '';
+      this.errorMsg.textContent = '';
+    } else {
+      this.errorMsg.textContent = 'Please make sure to fill both the title and author.';
+    }
+  }
+
+  handleRemove(event) {
+    const { index } = event.target.dataset;
+    this.books.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(this.books));
+    this.display();
+  }
+}
+
+(function createBookLibrary() {
+  const bookLibrary = new BookLibrary();
+  return bookLibrary;
+}());
