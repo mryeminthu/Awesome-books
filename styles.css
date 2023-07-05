@@ -123,7 +123,7 @@ input::placeholder {
 /* Add Books */
 
 #new-books {
-  display: flex;
+  display: none;
   flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
@@ -138,7 +138,7 @@ input::placeholder {
 /* Contact */
 
 #contact {
-  display: flex;
+  display: none;
   flex-direction: column;
   flex-wrap: nowrap;
   height: 100%;

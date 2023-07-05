@@ -132,8 +132,6 @@ function addNewBook() {
 }
 
 function initializePage() {
-  displayAllSections();
-  displayBookSection();
   bookLibrary = new BookLibrary();
 }
 
@@ -148,4 +146,3 @@ displayTime();
 setInterval(displayTime, 1000);
 
 window.addEventListener('DOMContentLoaded', initializePage);
-displayAllSections();
