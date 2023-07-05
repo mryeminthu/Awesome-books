@@ -1,5 +1,3 @@
-/* eslint-disable max-classes-per-file */
-
 class BookEntry {
   constructor(title, author) {
     this.title = title;
@@ -7,7 +5,6 @@ class BookEntry {
   }
 }
 
-/* eslint-disable-next-line no-unused-vars */
 class BookLibrary {
   constructor() {
     this.titleInput = document.getElementById('title');
@@ -71,7 +68,43 @@ class BookLibrary {
   }
 }
 
-(function createBookLibrary() {
-  const bookLibrary = new BookLibrary();
-  return bookLibrary;
-}());
+let bookLibrary;
+
+function displayAllSections() {
+  const sections = document.querySelectorAll('section');
+  sections.forEach((section) => {
+    section.style.display = 'block';
+  });
+  if (bookLibrary) {
+    bookLibrary.display();
+  }
+}
+
+function displayBookSection() {
+  const sections = document.querySelectorAll('section');
+  sections.forEach((section) => {
+    if (section.id === 'book-section') {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+  if (bookLibrary) {
+    bookLibrary.display();
+  }
+}
+
+function addNewBook() {
+  if (bookLibrary) {
+    bookLibrary.handleClick(event);
+  }
+}
+
+function initializePage() {
+  displayAllSections();
+  displayBookSection();
+  bookLibrary = new BookLibrary();
+}
+
+window.addEventListener('DOMContentLoaded', initializePage);
+displayAllSections();

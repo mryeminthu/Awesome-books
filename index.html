@@ -11,15 +11,15 @@
 </head>
 <body>
     <header>
-    <nav class="container" id="navbar">
-      <h3>Awesome Books</h3>
-      <ul id="menu">
-        <li><a href="#" onclick="">List</a></li>
-        <li><a href="#" onclick="">Add new</a></li>
-        <li><a href="#" onclick="">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <nav class="container" id="navbar">
+            <h3 onclick="displayAllSections()">Awesome Books</h3>
+            <ul id="menu">
+                <li><a href="#" onclick="displayBookSection()">List</a></li>
+                <li><a href="#" onclick="displayNewBooksSection()">Add new</a></li>
+                <li><a href="#" onclick="displayContactSection()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <section id="book-section">
         <h1 class="awesome-title">All awesome books</h1>
         <div id="output"></div>
@@ -31,7 +31,7 @@
                 <input type="text" placeholder="Title" id="title"><br><br>
                 <input type="text" placeholder="Author" id="author"><br><br>
                 <p id="error-msg"></p>
-                <button id="addBtn" type="button">Add</button>
+                <button id="addBtn" type="button" onclick="addNewBook()">Add</button>
             </form>
         </div>
     </section>
@@ -41,10 +41,14 @@
         <br> You can reach us by email or phone.</b>
         <ul>
             <li>Our email: example@mail.com</li>
-            <li>Our phone number . 00000000000</li>
+            <li>Our phone number: 00000000000</li>
         </ul>
     </section>
-    <s></s>
     <script src="app.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        displayAllSections();
+      });
+    </script>
 </body>
 </html>
