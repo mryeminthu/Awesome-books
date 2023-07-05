@@ -1,4 +1,4 @@
-/* eslint-disable max-classes-per-file no-unused-vars */
+/* eslint-disable max-classes-per-file, no-unused-vars */
 
 class BookEntry {
   constructor(title, author) {
@@ -37,7 +37,7 @@ class BookLibrary {
           <button class="remove-button" data-index="${index}">Remove</button>`;
         bookElement.style.backgroundColor = index % 2 === 0 ? '#fff' : '#ababab';
         this.output.appendChild(bookElement);
-        });
+      });
     }
 
     if (Object.keys(this.books).length === 0) {
