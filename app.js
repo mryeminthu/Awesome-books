@@ -24,7 +24,7 @@ class BookLibrary {
     if (this.books.length === 0) {
       const messageElement = document.createElement('p');
       messageElement.textContent = 'No book has been added yet.';
-      messageElement.classList.add('no-books-message'); 
+      messageElement.classList.add('no-books'); 
       this.output.appendChild(messageElement);
     } else {
         this.books.forEach((book, index) => {
@@ -125,7 +125,7 @@ function displayContactSection() {
 
 function addNewBook() {
   if (bookLibrary) {
-    bookLibrary.handleClick(button);
+    bookLibrary.handleClick(this);
   }
 }
 
@@ -137,3 +137,7 @@ function initializePage() {
 
 window.addEventListener('DOMContentLoaded', initializePage);
 displayAllSections();
+
+window.addEventListener('DOMContentLoaded', function() {
+  displayAllSections();
+});

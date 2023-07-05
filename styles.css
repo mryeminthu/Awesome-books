@@ -91,7 +91,7 @@ input::placeholder {
   margin: 0.3em;
 }
 
-.no-books-message {
+.no-books {
   background-color: #ababab;
   color: black;
   font-weight: bold;
@@ -137,10 +137,4 @@ input::placeholder {
   width: 100%;
   padding: 0.2em;
   align-items: center;
-}
-
-/* Active Page */
-
-.show {
-  display:flex;
 }
