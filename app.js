@@ -41,7 +41,7 @@ class BookLibrary {
     }
 
     const removeButtons = this.output.getElementsByClassName('remove-button');
-    Array.from(removeButtons).forEach(button => {
+    Array.from(removeButtons).forEach((button) => {
       button.addEventListener('click', this.handleRemove.bind(this));
     });
   }
@@ -64,11 +64,14 @@ class BookLibrary {
   }
 
   handleRemove(event) {
-    const index = event.target.dataset.index;
+    const { index } = event.target.dataset;
     this.books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.display();
   }
 }
 
-const bookLibrary = new BookLibrary();
+(function createBookLibrary() {
+  const bookLibrary = new BookLibrary();
+  return bookLibrary;
+}());
