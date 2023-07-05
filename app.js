@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file */
+
 class BookEntry {
   constructor(title, author) {
     this.title = title;
@@ -5,6 +7,7 @@ class BookEntry {
   }
 }
 
+/* eslint-disable-next-line no-unused-vars */
 class BookLibrary {
   constructor() {
     this.titleInput = document.getElementById('title');
@@ -24,17 +27,17 @@ class BookLibrary {
     if (this.books.length === 0) {
       const messageElement = document.createElement('p');
       messageElement.textContent = 'No book has been added yet.';
-      messageElement.classList.add('no-books'); 
+      messageElement.classList.add('no-books');
       this.output.appendChild(messageElement);
     } else {
-        this.books.forEach((book, index) => {
-        const bookElement = document.createElement('div');
-        bookElement.classList.add('book-entry');
-        bookElement.innerHTML = `
-          "${book.title}" by ${book.author}
-          <button class="remove-button" data-index="${index}">Remove</button>`;
-        bookElement.style.backgroundColor = index % 2 === 0 ? '#fff' : '#ababab';
-        this.output.appendChild(bookElement);
+      this.books.forEach((book, index) => {
+      const bookElement = document.createElement('div');
+      bookElement.classList.add('book-entry');
+      bookElement.innerHTML = `
+        "${book.title}" by ${book.author}
+        <button class="remove-button" data-index="${index}">Remove</button>`;
+      bookElement.style.backgroundColor = index % 2 === 0 ? '#fff' : '#ababab';
+      this.output.appendChild(bookElement);
       });
     }
 
@@ -135,9 +138,9 @@ function initializePage() {
   bookLibrary = new BookLibrary();
 }
 
-window.addEventListener('DOMContentLoaded', initializePage);
+window.addEventListener ('DOMContentLoaded', initializePage);
 displayAllSections();
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener ('DOMContentLoaded', function() {
   displayAllSections();
 });
