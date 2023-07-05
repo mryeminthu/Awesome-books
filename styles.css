@@ -85,7 +85,12 @@ input::placeholder {
 #book-section > * {
   margin: 0.3em;
 }
-
+.no-books-message {
+  background-color: #ababab;
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+}
 .book-entry {
   display: flex;
   flex-wrap: nowrap;

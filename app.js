@@ -21,15 +21,22 @@ class BookLibrary {
   display() {
     this.output.innerHTML = '';
 
-    this.books.forEach((book, index) => {
-      const bookElement = document.createElement('div');
-      bookElement.classList.add('book-entry');
-      bookElement.innerHTML = `
-        "${book.title}" by ${book.author}
-        <button class="remove-button" data-index="${index}">Remove</button>`;
-      bookElement.style.backgroundColor = index % 2 === 0 ? '#fff' : '#ababab';
-      this.output.appendChild(bookElement);
-    });
+    if (this.books.length === 0) {
+      const messageElement = document.createElement('p');
+      messageElement.textContent = 'No book is added yet.';
+      messageElement.classList.add('no-books-message'); 
+      this.output.appendChild(messageElement);
+    } else {
+        this.books.forEach((book, index) => {
+        const bookElement = document.createElement('div');
+        bookElement.classList.add('book-entry');
+        bookElement.innerHTML = `
+          "${book.title}" by ${book.author}
+          <button class="remove-button" data-index="${index}">Remove</button>`;
+        bookElement.style.backgroundColor = index % 2 === 0 ? '#fff' : '#ababab';
+        this.output.appendChild(bookElement);
+      });
+    }
 
     if (Object.keys(this.books).length === 0) {
       this.output.classList.remove('container');
