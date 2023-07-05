@@ -10,20 +10,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="book-section">
+    <header>
+        <nav class="container" id="navbar">
+            <h3 onclick="displayAllSections()">Awesome Books</h3>
+            <ul id="menu">
+                <li id="list-link"><a href="#" onclick="displayBookSection()">List</a></li>
+                <li id="add-link"><a href="#" onclick="displayNewBooksSection()">Add new</a></li>
+                <li id="contact-link"><a href="#" onclick="displayContactSection()">Contact</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <div class="date-time"></div> 
+    <section id="book-section">
         <h1 class="awesome-title">All awesome books</h1>
         <div id="output"></div>
-        <hr>
+    </section>
+    <section id="new-books">
         <div class="form-group">
             <h2>Add a new book</h2>
             <form>
                 <input type="text" placeholder="Title" id="title"><br><br>
                 <input type="text" placeholder="Author" id="author"><br><br>
                 <p id="error-msg"></p>
-                <button id="addBtn" type="button">Add</button>
+                <button id="addBtn" type="button" onclick="addNewBook()">Add</button>
             </form>
         </div>
-    </section><s></s>
+    </section>
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p>We will be pleased to answer any further questions you might have.</p>
+        <br> You can reach us by email or phone.</b>
+        <ul>
+            <li>Our email: example@mail.com</li>
+            <li>Our phone number: 00000000000</li>
+        </ul>
+    </section>
     <script src="app.js"></script>
 </body>
 </html>
