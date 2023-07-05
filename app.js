@@ -138,7 +138,7 @@ function initializePage() {
 }
 
 function displayTime() {
-  const dateTime = document.getElementById('date-time');
+  const dateTime = document.querySelector('.date-time');
   const date = new Date();
   const dateString = date.toLocaleDateString('en-US');
   const timeString = date.toLocaleTimeString('en-US');
