@@ -14,10 +14,10 @@
         <nav class="container" id="navbar">
             <h3 onclick="displayAllSections()">Awesome Books</h3>
             <ul id="menu">
-                <li><a href="#" onclick="displayBookSection()">List</a></li>
-                <li><a href="#" onclick="displayNewBooksSection()">Add new</a></li>
-                <li><a href="#" onclick="displayContactSection()">Contact</a></li>
-            </ul>
+                <li id="list-link"><a href="#" onclick="displayBookSection()">List</a></li>
+                <li id="add-link"><a href="#" onclick="displayNewBooksSection()">Add new</a></li>
+                <li id="contact-link"><a href="#" onclick="displayContactSection()">Contact</a></li>
+            </ul> 
         </nav>
     </header>
     <section id="book-section">
@@ -45,10 +45,6 @@
         </ul>
     </section>
     <script src="app.js"></script>
-    <script>
-      window.addEventListener('DOMContentLoaded', function() {
-        displayAllSections();
-      });
     </script>
 </body>
 </html>

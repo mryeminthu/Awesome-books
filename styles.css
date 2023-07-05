@@ -31,6 +31,11 @@ ul {
   list-style-type: none;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 input {
   display: flex;
   margin: 0;
@@ -85,12 +90,14 @@ input::placeholder {
 #book-section > * {
   margin: 0.3em;
 }
+
 .no-books-message {
   background-color: #ababab;
-  color: red;
+  color: black;
   font-weight: bold;
   padding: 10px;
 }
+
 .book-entry {
   display: flex;
   flex-wrap: nowrap;
@@ -130,4 +137,10 @@ input::placeholder {
   width: 100%;
   padding: 0.2em;
   align-items: center;
+}
+
+/* Active Page */
+
+.show {
+  display:flex;
 }
