@@ -10,10 +10,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="book-section">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <label class="mylogo" onclick="displayAllSections()">Awesome Books</label>
+            <ul class="three-menu">
+                <li><a href="#" onclick="displayListSection()">List</a></li>
+                <li><a href="#" onclick="displayAddNewSection()">Add new</a></li>
+                <li><a href="#" onclick="displayContactSection()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="listSection">
         <h1 class="awesome-title">All awesome books</h1>
         <div id="output"></div>
         <hr>
+    </section>
+    <section id="addNewSection">
         <div class="form-group">
             <h2>Add a new book</h2>
             <form>
@@ -23,7 +47,15 @@
                 <button id="addBtn" type="button">Add</button>
             </form>
         </div>
-    </section><s></s>
+    </section>
+    <section id="contactSection">
+        <h2>Contact Information</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eum eligendi accusamus vel, nulla dolorum?</p>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
+<s></s>
     <script src="app.js"></script>
 </body>
 </html>
