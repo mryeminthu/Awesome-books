@@ -137,5 +137,15 @@ function initializePage() {
   bookLibrary = new BookLibrary();
 }
 
+function displayTime() {
+  const dateTime = document.getElementById('date-time');
+  const date = new Date();
+  const dateString = date.toLocaleDateString('en-US');
+  const timeString = date.toLocaleTimeString('en-US');
+  dateTime.innerHTML = `${dateString}, ${timeString}`;
+}
+displayTime();
+setInterval(displayTime, 1000);
+
 window.addEventListener('DOMContentLoaded', initializePage);
 displayAllSections();

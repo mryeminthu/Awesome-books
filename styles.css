@@ -78,6 +78,13 @@ input::placeholder {
   margin-right: 0.3em;
 }
 
+/* Date and Time */
+.date-time {
+  display: block;
+  float: right;
+  margin-top: 5px;
+}
+
 /* Book Section */
 
 #book-section {
@@ -85,6 +92,7 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
   margin: 0.7em;
+  clear: both;
 }
 
 #book-section > * {
